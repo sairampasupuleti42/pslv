@@ -1,0 +1,95 @@
+<div>
+  <div class="head-cat border-primary">
+    <div class="pull-left bg-blue chip">
+      <h4>
+        <span>
+          <i class="fas fa-rss"></i>
+        </span> &nbsp; Latest News</h4>
+    </div>
+  </div>
+
+  <div class="media" *ngFor="let news_items of  side_posts">
+
+    <div class="media-left">
+      <a href="#" [routerLink]="['/article/',news_items.permalink]">
+        <img src="{{news_items.image}}" class="media-object" style="width:90px; height: 60px;">
+      </a>
+    </div>
+    <div class="media-body">
+      <a href="#" [routerLink]="['/article/',news_items.permalink]">
+        <h4 class="media-heading"> {{news_items.title}} </h4>
+      </a>
+
+      <p>
+        <span>
+          <i class="fa fa-calendar-o" aria-hidden="true"></i> {{news_items.created_on | date}} </span>
+        <span>
+          <i class="fa fa-user-o" aria-hidden="true"></i> admin</span>
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="clearfix"></div>
+  <div class="">
+    <div class="head-cat border-primary">
+
+      <div class="pull-left bg-blue chip">
+        <h4>
+          <span>
+            <i class="fas fa-rss"></i>
+          </span> Cartoon </h4>
+      </div>
+    </div>
+    <img src="/assets/images/cartoon.jpg" class="img-responsive my-30" alt="" style="height: 250px;">
+  </div>
+  <hr>
+  <div class="opinion-head">
+
+    <div class="">
+      <div class="head-cat border-primary">
+
+        <div class="pull-left bg-blue chip">
+          <h4>
+            <span>
+              <i class="fas fa-rss"></i>
+            </span> Opinion Poll</h4>
+        </div>
+      </div>
+
+      <div class="">
+        <img src="https://cdn.123telugu.com/content/wp-content/uploads/2018/08/Guda2.jpg" class="img-responsive my-30"
+          alt="">
+      </div>
+      <div class="">
+        <h3>Poll: Which aspect in Goodachari did you like the most? </h3>
+        <div class="pool-d-flex">
+          <label class="radio">A) Edge of the seat narration ఉత్కంఠభరితంగా సాగిన కథ, కథనం
+            <input type="radio" checked="checked" name="is_company">
+            <span class="checkround"></span>
+          </label>
+          <label class="radio">B) High technical standards హై టెక్నికల్ వేల్యూస్‌
+            <input type="radio" name="is_company">
+            <span class="checkround"></span>
+          </label>
+          <label class="radio">C) Adivi Sesh's performance అడివి శేష్ నటన
+            <input type="radio" name="is_company">
+            <span class="checkround"></span>
+          </label>
+          <label class="radio">D) Story, Screenplay , Acting , కథ, కథనం
+            <input type="radio" name="is_company">
+            <span class="checkround"></span>
+          </label>
+          <br>
+
+
+        </div>
+        <button class="btn cust-btn " type="button" id="btn-registration" style="font-size: 20PX;letter-spacing: 1px;">
+          Vote </button>
+
+      </div>
+    </div>
+
+  </div>
+  <hr>
+
+</div>

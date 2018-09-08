@@ -1,0 +1,71 @@
+<pslv-header></pslv-header>
+<div class="clearfix"></div>
+<div class="container-custom" style="background: #ffffff">
+    <div class="home-main">
+        <div class="head-lines">
+            <div class="custom-row">
+                <div class="col-md-12 px-0">
+                    <div class="col-md-2 bg-headline">
+                        <h4>
+                            <span>
+                <i class="fas fa-thumbtack"> </i> &nbsp;
+              </span> Breaking News </h4>
+                    </div>
+                    <div class="col-md-10 bg-gray">
+                        <marquee width="100%">
+                            <ul class="breaking-news">
+                                <li>
+                                    <a href="#" [routerLink]="['/article/news-title-here']"> అవయవదానానికి ముందుకొచ్చిన చంద్రబాబు</a>
+                                </li>
+                                <li>
+                                    <a href="#" [routerLink]="['/article/news-title-here']"> అక్రమ మైనింగ్‌ ఇకనైనా ఆపాలి: పవన్‌</a>
+                                </li>
+                                <li>
+                                    <a href="#" [routerLink]="['/article/news-title-here']"> మంత్రి భర్త దోషి అని తేలితే వదిలేది లేదు</a>
+                                </li>
+                                <li>
+                                    <a href="#" [routerLink]="['/article/news-title-here']"> దుర్గగుడిలో చీర మాయంపై సందిగ్ధత </a>
+                                </li>
+
+
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12 article-cat my-30" style="background: #ffffff">
+            <div class="col-md-8">
+
+                <div class="category-main">
+                    <div class="media" *ngFor="let news_post of category_posts ">
+                        <div class="media-left">
+                            <img src="{{news_post.news_image}}" class="media-object">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading text-blue">{{news_post.news_titile}} </h4>
+                            <p>
+                                <span>
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i> {{news_post.news_postedon}}</span>
+                                <span>
+                        <i class="fa fa-user-o" aria-hidden="true"></i> {{news_post.news_postedby}} </span>
+                            </p>
+                            <p> {{ news_post.news_description}} </p>
+                            <a href="#" [routerLink]="['/article/news-title-here']" class="btn btn-success btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-30">
+                <pslv-left-sidebar></pslv-left-sidebar>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+<pslv-footer></pslv-footer>

@@ -1,0 +1,77 @@
+<pslv-header></pslv-header>
+<div class="container-custom">
+  <div class="home-main" style="background: #ffffff">
+    <div class="head-lines">
+      <div class="custom-row">
+        <div class="col-md-12 px-0">
+          <div class="col-md-2 bg-headline">
+            <h4>
+              <span>
+                <i class="fas fa-thumbtack"></i>
+              </span> Head Lines</h4>
+          </div>
+          <div class="col-md-10 bg-gray">
+            <marquee width="100%">
+              <ul class="breaking-news">
+                <li *ngFor="let post of breaking_posts">
+                  <a href="#" [routerLink]="['/article/',post.permalink]"> {{post.title}}</a>
+                </li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 article-cat px-10 my-30" style="background: #ffffff">
+        <div class="col-md-8">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Category</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
+            </ol>
+          </nav>
+          <div class="article-main">
+            <h2> {{post.title}} </h2>
+            <div class="w-100">
+              <div class="float-right">
+                <h4>Share</h4>
+                <ul class="list-unstyled d-flex social">
+                  <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                  <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                  <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                </ul>
+                <hr>
+              </div>
+              <div class="float-left">
+                <h4>View</h4>
+                <ul class="list-unstyled d-flex social left">
+                  <li><a href=""><i class="fa fa-thumbs-o-up"></i> 10 </a></li>
+                  <li><a href=""><i class="fa fa-thumbs-o-down"></i> 8 </a></li>
+                  <li><a href=""><i class="fa fa-comments-o"></i> 18 </a></li>
+                  <li><a href=""><i class=" fa fa-eye  "></i> 22 </a> </li>
+                </ul>
+                <hr>
+              </div>
+            </div>
+            <div class="article-image text-center">
+              <img [src]="post.image" class="img-responsive mx-auto" [alt]="post.permalink">
+            </div>
+            <div [innerHTML]="post.description | keepHtml"></div>
+            <hr>
+            <pslv-comment [comments]="comments"> </pslv-comment>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <pslv-left-sidebar></pslv-left-sidebar>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <pslv-footer></pslv-footer>

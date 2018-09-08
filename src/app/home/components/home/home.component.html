@@ -1,0 +1,192 @@
+<pslv-header></pslv-header>
+<div class="clearfix"></div>
+<div class="container-custom">
+  <div class="home-main" style="background: #ffffff">
+    <div class="head-lines">
+      <div class="custom-row">
+        <div class="col-md-12 px-0">
+          <div class="col-md-2 bg-headline">
+            <h4>
+              <span>
+                <i class="fas fa-thumbtack"> </i> &nbsp;
+              </span> Breaking News </h4>
+          </div>
+          <div class="col-md-10 bg-gray">
+            <marquee width="100%">
+              <ul class="breaking-news">
+                <li *ngFor="let post of breaking_posts">
+                  <a href="#" [routerLink]="['/article/',post.permalink]"> {{post.title}}</a>
+                </li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="head-news">
+      <div class="row mx-5">
+        <div class="col-md-12 ">
+          <div class="col-md-7 ">
+            <iframe width="672" height="450" src="https://www.youtube.com/embed/rCORwWikDtI" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+          <div class="col-md-5 ">
+         
+            <div class="top-left">
+              <a href="#" [routerLink]="['/article/news-title-here']">
+                <img src="http://www.pslvtv.com/admin/gallery/1532049075_jagan.JPG" class="img-responsive" alt="">
+                <div class="overlay"></div>
+                <span class="top-left-center">Full News...</span>
+              </a>
+              <div class="head-news-content">
+                <h4>చంద్ర బాబు నిజంగానే నంబర్ వన్ &nbsp;- &nbsp;జగన్...!</h4>
+                <p>
+                  <span>
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i> 2018-08-01 15:21:08 </span>
+                  <span>
+                    <i class="fa fa-user-o" aria-hidden="true"></i> admin</span>
+                </p>
+              </div>
+            </div>
+            <div class="top-left">
+              <a href="#" [routerLink]="['/article/news-title-here']">
+                <img src="http://www.pslvtv.com/admin/gallery/1532160818_chandra.JPG" class="img-responsive" alt="">
+                <div class="overlay"></div>
+                <span class="top-left-center">Full News...</span>
+              </a>
+              <div class="head-news-content">
+                <h4>తన సామాజిక వర్గానికే ప్రాధాన్యత ఇచ్చిన చంద్రబాబు..!</h4>
+                <p>
+                  <span>
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i> 2018-08-01 15:21:08 </span>
+                  <span>
+                    <i class="fa fa-user-o" aria-hidden="true"></i> admin</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ads-section my-30">
+      <div class="custom-row">
+        <div class="col-md-12 px-0">
+          <div class="col-md-2 bg-headline">
+            <h4>
+              <span>
+                <i class="fas fa-thumbtack"> </i> &nbsp;
+              </span> Breaking News </h4>
+          </div>
+          <div class="col-md-10 bg-gray">
+            <marquee width="100%">
+              <ul class="breaking-news">
+                <li *ngFor="let post of breaking_posts">
+                  <a href="#" [routerLink]="['/article/',post.permalink]"> {{post.title}}</a>
+                </li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-5">
+        <div class="col-md-12 my-30">
+          <div class="col-md-2">
+            <div class="bg-blue add-left">
+              <h3 class="m-0">Add</h3>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="col-md-4">
+              <a href="#">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="/assets/images/ad-1.jpg" class="media-object">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Lorem Ipsum is simply dummy text of the printing and typesetting
+                      industry. Lore</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="/assets/images/ad-1.jpg" class="media-object">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Lorem Ipsum is simply dummy text of the printing and typesetting
+                      industry. Lore</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="#">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="/assets/images/ad-1.jpg" class="media-object">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Lorem Ipsum is simply dummy text of the printing and typesetting
+                      industry. Lore</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-cat">
+      <div class="row mx-5">
+        <div class="col-md-12 ">
+          <div class="col-md-8">
+            <div class="" *ngFor="let home_post of home_posts">
+              <div class="head-cat border-primary">
+                <div class="pull-right chip2">
+                  <a href="" class=""> Readmore &nbsp;
+                    <i class="fas fa-chevron-circle-right"></i>
+                  </a>
+                </div>
+                <div class="pull-left bg-blue chip">
+                  <h4>
+                    <span>
+                      <i class="fas fa-rss"></i>
+                    </span> {{home_post.category_title}}</h4>
+                </div>
+              </div>
+              <div class="row my-30">
+                <div class="col-md-6" *ngFor="let news_post of breaking_posts" style="height:100px">
+                  <a href="#" [routerLink]="['/article/',news_post.permalink]">
+                    <div class="media">
+                      <div class="media-left">
+                        <img src="{{news_post.image}}" class="media-object" style="width:90px; height: 60px;">
+                      </div>
+                      <div class="media-body">
+                        <h4 class="media-heading">{{news_post.title }}</h4>
+                        <p>
+                          <span>
+                            <i class="fa fa-calendar-o" aria-hidden="true"></i> {{news_post.created_on |date }} </span>
+                          <span>
+                            <i class="fa fa-user-o" aria-hidden="true"></i> sairam</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <pslv-left-sidebar></pslv-left-sidebar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<pslv-footer></pslv-footer>

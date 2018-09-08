@@ -1,0 +1,60 @@
+<section class="comments-main ">
+    <div class="col-md-12">
+        <form>
+            <div class="d-flex">
+                <i _ngcontent-c3="" class="fa fa-user-circle-o fa-2x text-light-blue "></i>
+                <div class="group">
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Add a public comment...</label>
+                </div>
+            </div>
+            <div class="float-right form-submit">
+                <a href="#" class="mr-3 text-light-dark">CANCEL</a>
+                <a href="#" type="" class="btn btn-primary">COMMENT</a>
+            </div>
+
+        </form>
+
+        <div class="media mb-60">
+            <a class="pull-left" href="#">
+
+                <img class="media-object align-self-center mr-3" src="https://yt3.ggpht.com/-nyvd9oHF-zY/AAAAAAAAAAI/AAAAAAAAAAA/ororbE4PU3A/s48-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Image">
+            </a>
+            <div class="media-body">
+                <p class="comments-head">
+                    Sangeetha Neeruvoi <span class="text-light-dark ml-1"> 20 hours ago</span>
+                </p>
+
+                <p class="comments-body">Superb Song 👌👌 Best Song Of The Movie 👌 Vijay Devarakonda Fans Hit Like👍👍﻿</p>
+                <p class="text-light-dark comments-footer"> <span>  <i class="fa fa-thumbs-up mr-2"></i> 376  </span> <span>  <i class="fa fa-thumbs-down mr-2 ml-2"></i> 76  </span> <a href="#" (click)="show=!show" class="ml-4 text-light-dark">{{show ? 'REPLAY' : 'REPLAY'}}   </a></p>
+             <div *ngIf="show" class="mt-4">
+                
+                </div>
+                <a (click)="show=!show" class="comments-bottom">{{show ? 'Hide replies ' : 'View all 25 replies '  }}</a>
+                <div *ngIf="show" class="mt-4">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+
+                            <img class="media-object align-self-center mr-3" src="https://yt3.ggpht.com/-nyvd9oHF-zY/AAAAAAAAAAI/AAAAAAAAAAA/ororbE4PU3A/s48-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                            <p class="comments-head">
+                                Sangeetha Neeruvoi <span class="text-light-dark ml-1"> 20 hours ago</span>
+                            </p>
+
+                            <p class="comments-body">Superb Song 👌👌 Best Song Of The Movie 👌 Vijay Devarakonda Fans Hit Like👍👍﻿</p>
+                            <p class="text-light-dark comments-footer"> <span>  <i class="fa fa-thumbs-up mr-2"></i> 376  </span> <span>  <i class="fa fa-thumbs-down mr-2 ml-2"></i> 76  </span> <a href="" class="ml-4 text-light-dark"> REPLAY </a></p>
+                          
+                        
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
